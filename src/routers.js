@@ -1,12 +1,8 @@
-const express = require('express');
-const { Router } = express;
-
+const { Router } = require('express');
 const routes = Router();
 
-const CriarClienteController = require('./modules/creatUser/creatUserController')
+const CriarClienteController = require('./modules/creatUser/creatUserController');
 
-routes.post('/creat', CriarClienteController.handle)
+routes.post('/creat', CriarClienteController.handle);
 
-
-
-module.exports = routes;
+module.exports = { routes };

@@ -1,7 +1,6 @@
-const { PrismaClient } = require('@prisma/client');
+const { prisma } = require('../../database/PrismaClient');
 const { hash } = require('bcrypt');
 
-const prisma = new PrismaClient();
 
 async function cadastrarUsuario(nome, email, senha, telefone) {
   try {

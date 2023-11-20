@@ -1,5 +1,5 @@
 const { Request, Response } = require('express');
-const cadastrarUsuario = require('./cadastrarUsuario');
+const cadastrarUsuario = require('./creatUser');
 
 class CriarClienteController {
   async handle(req, res) {

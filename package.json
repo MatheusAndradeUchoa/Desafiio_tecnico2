@@ -6,7 +6,8 @@
   "author": "Matheus Andrade Uchoa <uchoamatheus22@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec  src/server.js"
+    "dev": "node src/server.js",
+    "start": "nodemon src/server.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
