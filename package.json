@@ -5,8 +5,12 @@
   "repository": "https://github.com/MatheusAndradeUchoa/Desafiio_tecnico2.git",
   "author": "Matheus Andrade Uchoa <uchoamatheus22@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "start": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
     "postinstall": "prisma generate"
   },
   "dependencies": {
