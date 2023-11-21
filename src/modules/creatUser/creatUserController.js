@@ -13,9 +13,11 @@ class CriarClienteController {
       }
 
       return res.json(result);
+
     } catch (error) {
-      console.error('Erro no controller:', error);
+
       return res.status(500).json({ error: 'Erro interno do servidor' });
+
     }
   }
 }
