@@ -1,44 +1,28 @@
 const { compare } = require("bcrypt");
-const { prisma } = require("../../dataBase/prismaCliente");
+const { prisma } = require("../../database/PrismaClient");
 const { sign } = require("jsonwebtoken");
 
 class Login {
   async execute({ senha, email }) {
-    const cliente = await prisma.cliente.findFirst({
+
+    const user = await prisma.user.findFirst({
       where: { email },
     });
 
-    const usuario = await prisma.usuario.findFirst({
-      where: { email },
-    });
-
-    if (cliente) {
-      const senhaMatch = await compare(senha, cliente.senha);
+    if (user) {
+      const senhaMatch = await compare(senha, user.senha);
       if (!senhaMatch) {
-        return new Error("Nome de usuário ou senha inválido");
-      }
-
-      const token = sign({ email }, "chavesecretacliente", {
-        subject: cliente.id,
-        expiresIn: "1d",
-      });
-      return { token, tipo: 1 };
-    }
-
-    if (usuario) {
-      const senhaMatch = await compare(senha, usuario.senha);
-      if (!senhaMatch) {
-        return new Error("Nome de usuário ou senha inválido");
+        return new Error("email de usuário ou senha inválido");
       }
 
       const token = sign({ email }, "chavesecreta", {
-        subject: usuario.id,
-        expiresIn: "30m",
+        subject: user.id,
+        expiresIn: "1d",
       });
-      return { token };
+      return { token};
     }
 
-    if (!usuario && !cliente) {
+    if (!user) {
       return new Error("Email ou senha inválido");
     }
   }
