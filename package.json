@@ -1,7 +1,7 @@
 {
   "name": "desafiio_tecnico2",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/MatheusAndradeUchoa/Desafiio_tecnico2.git",
   "author": "Matheus Andrade Uchoa <uchoamatheus22@gmail.com>",
   "license": "MIT",
