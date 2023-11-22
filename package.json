@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "vercel_build": "npx prisma migrate deploy"
+    "vercel_build": "prisma migrate deploy"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
