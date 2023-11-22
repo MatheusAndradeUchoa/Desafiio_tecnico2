@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "vercel_build": "npx prisma generate"
+    "vercel_build": "npx prisma migrate dev"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
