@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 app.use(routes);
 
 app.get("/", (req, res) => {
-  console.log("rodando");
+  res.json("rodando")
 });
 
 app.use((err, req, res, next) => {
