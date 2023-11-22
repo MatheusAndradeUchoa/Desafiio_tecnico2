@@ -5,12 +5,9 @@
   "repository": "https://github.com/MatheusAndradeUchoa/Desafiio_tecnico2.git",
   "author": "Matheus Andrade Uchoa <uchoamatheus22@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
     "dev": "nodemon src/server.js",
-    "postinstall": "npx prisma generate"
+    "vercel_build": "npx prisma generate"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
