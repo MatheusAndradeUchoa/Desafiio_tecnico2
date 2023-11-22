@@ -6,7 +6,6 @@
   "author": "Matheus Andrade Uchoa <uchoamatheus22@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js",
     "start": "node src/server.js",
     "vercel_build": "prisma migrate deploy"
   },
