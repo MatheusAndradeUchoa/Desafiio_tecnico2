@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 app.use(routes);
 
 app.get("/", (req, res) => {
-  res.json("servidor rodando")
+  res.json("Bem Vindo ao Backend -  Desafio Técnico 2")
 });
 
 app.use((err, req, res, next) => {
