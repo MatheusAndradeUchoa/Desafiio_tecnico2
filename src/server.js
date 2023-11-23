@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 app.use(routes);
 
 app.get("/", (req, res) => {
-  res.json("rodando")
+  res.json("servidor rodando")
 });
 
 app.use((err, req, res, next) => {
